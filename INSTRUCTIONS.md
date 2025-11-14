@@ -50,3 +50,31 @@ INFO:     Waiting for application startup.
 Then the following website gives access to the project.
 
 http://localhost:8080/
+
+## Updating
+
+We need to run the following command.
+
+`git fetch upstream`
+
+`git merge upstream/main`
+
+We need to make sure frontend and backend are updated and working.... Then finally committ those changes.
+
+### Frontend
+
+Run the following command in git bash.
+
+`npm ci --force`
+
+Then make sure you rebuild with the following command.
+
+`npm run build`
+
+### Backend
+
+Run the following command (Make sure venv is up and running).
+
+`source venv/Scripts/activate`
+
+`pip install -r requirements.txt -U`

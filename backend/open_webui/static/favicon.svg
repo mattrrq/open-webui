@@ -1,4 +1,1 @@
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="100" r="90" fill="#ccc" stroke="#999" stroke-width="10"></circle>
-  <text x="50%" y="50%" font-size="30" text-anchor="middle" alignment-baseline="central" fill="#666">Logo</text>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="katman_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs><style>.cls-1{fill:#c21b2b;}</style></defs><polygon class="cls-1" points="133.53 11.06 11.06 133.53 378.47 133.53 378.47 500.94 500.94 378.47 500.94 11.06 133.53 11.06"/><polygon class="cls-1" points="11.06 182.52 11.06 500.94 330.32 500.94 330.32 378.47 133.53 378.47 133.53 182.52 11.06 182.52"/></svg>
