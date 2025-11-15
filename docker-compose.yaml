@@ -1,12 +1,13 @@
 services:
-  ollama:
-    volumes:
-      - ollama:/root/.ollama
-    container_name: ollama
-    pull_policy: always
-    tty: true
-    restart: unless-stopped
-    image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
+
+  #ollama:
+    #volumes:
+      #- ollama:/root/.ollama
+    #container_name: ollama
+    #pull_policy: always
+    #tty: true
+    #restart: unless-stopped
+    #image: ollama/ollama:${OLLAMA_DOCKER_TAG-latest}
 
   open-webui:
     build:
@@ -16,11 +17,13 @@ services:
     container_name: open-webui
     volumes:
       - open-webui:/app/backend/data
-    depends_on:
-      - ollama
+    #depends_on:
+      #- ollama
     ports:
       - ${OPEN_WEBUI_PORT-3000}:8080
     environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - ENABLE_OLLAMA_API=False
       - 'OLLAMA_BASE_URL=http://ollama:11434'
       - 'WEBUI_SECRET_KEY='
     extra_hosts:
@@ -28,5 +31,5 @@ services:
     restart: unless-stopped
 
 volumes:
-  ollama: {}
+  #ollama: {}
   open-webui: {}
